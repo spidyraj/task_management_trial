@@ -1,9 +1,7 @@
-[build]
-builder = "NIXPACKS"
-
 [[services]]
 name = "backend"
 source = "backend"
+buildConfig = { buildCommand = "npm install && npm run build && npx prisma generate", startCommand = "npx prisma migrate deploy && npm start" }
 healthcheckPath = "/api/health"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
@@ -12,3 +10,4 @@ restartPolicyMaxRetries = 10
 [[services]]
 name = "frontend" 
 source = "frontend"
+buildConfig = { buildCommand = "npm install && npm run build", startCommand = "npx serve out -p 3000" }
