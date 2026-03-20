@@ -69,7 +69,7 @@ export class TaskService {
 
     // Apply sorting
     const orderBy: any = {};
-    const sortField = sortBy === 'createdAt' ? 'created_at' : sortBy;
+    const sortField = sortBy; // Use the field name directly
     orderBy[sortField] = sortOrder;
 
     const [tasks, total] = await Promise.all([
@@ -110,7 +110,7 @@ export class TaskService {
         title,
         description,
         category,
-        priority,
+        priority: priority as 'LOW' | 'MEDIUM' | 'HIGH',
         deadline,
         userId,
       },
@@ -140,7 +140,7 @@ export class TaskService {
         ...(title && { title }),
         ...(description !== undefined && { description }),
         ...(category && { category }),
-        ...(priority && { priority }),
+        ...(priority && { priority: priority as 'LOW' | 'MEDIUM' | 'HIGH' }),
         ...(completed !== undefined && { completed }),
         ...(deadline && { deadline }),
       },

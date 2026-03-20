@@ -44,13 +44,6 @@ export class AuthService {
         username,
         email,
         password: hashedPassword,
-      },
-      select: {
-        id: true,
-        name: true,
-        username: true,
-        email: true,
-        created_at: true,
       }
     });
 
