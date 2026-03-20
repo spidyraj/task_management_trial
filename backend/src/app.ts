@@ -11,24 +11,18 @@ dotenv.config();
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-// Set environment variables temporarily to test Prisma
-process.env.DATABASE_URL = "postgresql://postgres:mypassword@localhost:5432/task_manager_db?schema=public";
-process.env.JWT_SECRET = "abc123secure";
-process.env.REFRESH_SECRET = "xyz456secure";
-process.env.PORT = "5000";
-
-// Debug: Check if environment variables are loaded
-console.log('Environment variables:', {
-  DATABASE_URL: process.env.DATABASE_URL,
-  JWT_SECRET: process.env.JWT_SECRET,
-  REFRESH_SECRET: process.env.REFRESH_SECRET,
-  PORT: process.env.PORT,
-});
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Configure CORS for production
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Debug middleware to log incoming requests
