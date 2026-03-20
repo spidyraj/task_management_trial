@@ -1,1 +1,1 @@
-web: npx prisma migrate deploy && npm start
+web: chmod +x migrate-and-start.sh && ./migrate-and-start.sh
