@@ -5,4 +5,4 @@ nixPkgs = ["nodejs_20"]
 cmds = ["npm install", "npm run build"]
 
 [start]
-cmd = "npx serve out -p 3000"
+cmd = "npm start"
