@@ -127,6 +127,18 @@ task-management/
 
 ## 📱 Screenshots
 
+### Main Application Page
+![Main Page](screenshots/main-page.png)
+*Landing page with navigation options for login, register, and dashboard access*
+
+### Login Interface
+![Login Page](screenshots/login.png)
+*Clean and modern login interface with form validation and error handling*
+
+### Registration Form
+![Register Page](screenshots/register.png)
+*User registration form with all required fields and validation*
+
 ### Dashboard View
 ![Dashboard Interface](screenshots/dashboard.png)
 *Main task management interface with sidebar, task list, and filtering options*
@@ -135,17 +147,13 @@ task-management/
 ![Task Form](screenshots/task-form.png)
 *Modal form for creating and editing tasks with all fields and validation*
 
-### Login/Register Pages
-![Authentication](screenshots/auth.png)
-*Clean login and registration interfaces with form validation*
+### Task List View
+![Task List](screenshots/task-list.png)
+*Organized task display with priority badges, completion status, and action buttons*
 
-### Analytics Dashboard
-![Analytics](screenshots/analytics.png)
-*Task statistics and completion analytics with charts*
-
-### Mobile Responsive View
-![Mobile View](screenshots/mobile.png)
-*Responsive design optimized for mobile devices*
+### Empty Dashboard State
+![Empty Dashboard](screenshots/empty-dashboard.png)
+*Empty state when no tasks exist, encouraging users to create their first task*
 
 ## �️ Tech Stack
 
