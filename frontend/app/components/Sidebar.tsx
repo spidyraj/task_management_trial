@@ -35,15 +35,10 @@ export default function Sidebar() {
         <div className="flex flex-col space-y-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div 
-              style={{
-                width: '64px',
-                height: '64px',
-                backgroundImage: 'url("/image__1_-removebg-preview.png")',
-                backgroundSize: 'contain',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center'
-              }}
+            <img 
+              src="/image__1_-removebg-preview.png" 
+              alt="App Logo" 
+              className="w-16 h-16 object-contain"
             />
             <span className="text-xl font-bold text-white">TaskMaster</span>
           </div>
