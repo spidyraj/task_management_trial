@@ -1,5 +1,7 @@
 # Task Management System
 
+🚀 **Live Application:** [https://frontend-production-2dff.up.railway.app/](https://frontend-production-2dff.up.railway.app/)
+
 A full-stack web application for managing personal tasks with secure authentication and comprehensive internal architecture.
 
 ## 🚀 Features
@@ -129,31 +131,28 @@ task-management/
 
 ### Main Application Page
 ![Main Page](screenshots/main-page.png)
-*Landing page with navigation options for login, register, and dashboard access*
 
-### Login Interface
+
+### Register Interface
 ![Login Page](screenshots/login.png)
-*Clean and modern login interface with form validation and error handling*
+*User registration form with all required fields and validation*
 
 ### Registration Form
 ![Register Page](screenshots/register.png)
-*User registration form with all required fields and validation*
+*Clean and modern login interface with form validation and error handling*
 
-### Dashboard View
-![Dashboard Interface](screenshots/dashboard.png)
-*Main task management interface with sidebar, task list, and filtering options*
 
 ### Task Creation Form
 ![Task Form](screenshots/task-form.png)
 *Modal form for creating and editing tasks with all fields and validation*
 
-### Task List View
+### Task filter View
 ![Task List](screenshots/task-list.png)
-*Organized task display with priority badges, completion status, and action buttons*
+*filter task display with priority badges, completion status, and action buttons*
 
-### Empty Dashboard State
+###  Dashboard analytics
 ![Empty Dashboard](screenshots/empty-dashboard.png)
-*Empty state when no tasks exist, encouraging users to create their first task*
+
 
 ## �️ Tech Stack
 
