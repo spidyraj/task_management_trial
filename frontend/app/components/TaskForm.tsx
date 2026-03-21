@@ -22,7 +22,7 @@ export default function TaskForm({ onSubmit, onCancel, initialData }: TaskFormPr
     title: initialData?.title || '',
     description: initialData?.description || '',
     category: initialData?.category || 'PERSONAL',
-    priority: initialData?.priority === 'MEDIUM' ? 'LOW' : initialData?.priority || 'LOW',
+    priority: initialData?.priority || 'LOW',
     deadline: initialData?.deadline || '',
     customCategory: '',
   });

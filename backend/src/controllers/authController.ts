@@ -77,7 +77,10 @@ export class AuthController {
       res.status(200).json({
         success: true,
         message: 'Token refreshed successfully',
-        data: response,
+        data: {
+          accessToken: response.accessToken,
+          refreshToken: response.refreshToken
+        }
       });
     } catch (error: any) {
       res.status(401).json({
