@@ -20,16 +20,9 @@ export default function Home() {
           >
             Register
           </Link>
-          <Link 
-            href="/dashboard" 
-            className="block px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-          >
-            Dashboard (Test)
-          </Link>
         </div>
         <div className="mt-8 text-gray-400">
-          <p>Backend: http://localhost:5000</p>
-          <p>Frontend: http://localhost:3000</p>
+          <p>Manage your tasks efficiently with our modern task management application.</p>
         </div>
       </div>
     </div>

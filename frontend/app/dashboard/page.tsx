@@ -111,9 +111,7 @@ export default function DashboardPage() {
 
   const handleToggleTask = async (taskId: number) => {
     try {
-      console.log('🔄 Toggling task:', taskId);
       const response = await taskService.toggleTask(taskId);
-      console.log('📊 Toggle response:', response);
       
       if (response.success) {
         setTasks(tasks.map(task => 
@@ -124,7 +122,6 @@ export default function DashboardPage() {
         fetchTasks();
       }
     } catch (error: any) {
-      console.error('❌ Toggle failed:', error);
       toast.error('Failed to update task status');
     }
   };

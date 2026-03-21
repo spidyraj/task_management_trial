@@ -30,8 +30,6 @@ export interface UpdateTaskData {
 
 export class TaskService {
   async getTasks(userId: number, filters: TaskFilters = {}) {
-    console.log('🔍 Fetching tasks for userId:', userId);
-    
     const {
       completed,
       search,
@@ -81,9 +79,6 @@ export class TaskService {
       }),
       prisma.task.count({ where })
     ]);
-
-    console.log('📊 Found tasks:', tasks.length);
-    console.log('📋 Task details:', tasks.map(t => ({ id: t.id, title: t.title, userId: t.userId })));
 
     const totalPages = Math.ceil(total / limit);
 
