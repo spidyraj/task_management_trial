@@ -168,42 +168,42 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-6 lg:p-8">
       {/* Header */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-white mb-2">Task Dashboard</h1>
-            <p className="text-gray-400">Manage your tasks efficiently</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Task Dashboard</h1>
+            <p className="text-gray-400 text-sm sm:text-base">Manage your tasks efficiently</p>
           </div>
           <button
             onClick={() => setShowTaskForm(true)}
-            className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg shadow-green-500/20"
+            className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg shadow-green-500/20 text-sm sm:text-base"
           >
             ➕ Add Task
           </button>
         </div>
 
       {/* Search and Filters */}
-        <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-xl p-6 mb-6 border border-gray-800">
-          <form onSubmit={handleSearch} className="mb-6">
-            <div className="flex gap-4">
+        <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-xl p-4 sm:p-6 mb-6 border border-gray-800">
+          <form onSubmit={handleSearch} className="mb-4 sm:mb-6">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search tasks..."
-                className="flex-1 px-4 py-3 border border-gray-800 rounded-lg focus:ring-2 focus:ring-green-600 bg-black text-white placeholder-gray-600 transition-all duration-200 focus:border-green-600"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 border border-gray-800 rounded-lg focus:ring-2 focus:ring-green-600 bg-black text-white placeholder-gray-600 transition-all duration-200 focus:border-green-600 text-sm sm:text-base"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg shadow-blue-500/20"
+                className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg shadow-blue-500/20 text-sm sm:text-base"
               >
                 🔍 Search
               </button>
             </div>
           </form>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Category Filter */}
           <div>
             <label className="block text-sm font-medium text-white mb-2 flex items-center">

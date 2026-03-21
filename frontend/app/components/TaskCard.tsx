@@ -85,26 +85,26 @@ export default function TaskCard({ task, onToggle, onDelete, onEdit }: TaskCardP
   };
 
   return (
-    <div className="bg-black rounded-lg shadow-lg p-3 hover:shadow-xl transition-all duration-200 border border-gray-800">
-      {/* Horizontal Layout */}
-      <div className="flex items-center space-x-3">
+    <div className="bg-black rounded-lg shadow-lg p-3 sm:p-4 hover:shadow-xl transition-all duration-200 border border-gray-800">
+      {/* Mobile Layout - Vertical */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-3">
         {/* Left Section - Status and Title */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 w-full sm:w-auto">
           <button
             onClick={() => onToggle(task.id)}
-            className={`w-5 h-5 rounded-full flex items-center justify-center transition-colors ${
+            className={`w-6 h-6 sm:w-5 sm:h-5 rounded-full flex items-center justify-center transition-colors ${
               task.completed
                 ? 'bg-green-600 text-white'
                 : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
             }`}
           >
-            <span className="text-xs">{task.completed ? '✓' : ''}</span>
+            <span className="text-xs sm:text-sm">{task.completed ? '✓' : ''}</span>
           </button>
         </div>
         
         {/* Middle Section - Content */}
-        <div className="flex-1 min-w-0">
-          <h3 className={`text-sm font-medium text-white truncate ${task.completed ? 'line-through opacity-60' : ''}`}>
+        <div className="flex-1 min-w-0 sm:ml-3">
+          <h3 className={`text-sm sm:text-base font-medium text-white truncate ${task.completed ? 'line-through opacity-60' : ''}`}>
             {task.title}
           </h3>
           {task.description && (
@@ -114,8 +114,8 @@ export default function TaskCard({ task, onToggle, onDelete, onEdit }: TaskCardP
           )}
           
           {/* Badges */}
-          <div className="flex items-center space-x-2 mt-1">
-            <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium border ${
+          <div className="flex flex-wrap items-center gap-1 sm:gap-2 mt-1">
+            <span className={`inline-flex items-center px-1 sm:px-2 py-1 rounded text-xs font-medium border ${
               task.category === 'WORK' ? 'bg-blue-900 text-blue-300 border-blue-800' :
               task.category === 'PERSONAL' ? 'bg-green-900 text-green-300 border-green-800' :
               task.category === 'HOME' ? 'bg-purple-900 text-purple-300 border-purple-800' :
@@ -124,9 +124,8 @@ export default function TaskCard({ task, onToggle, onDelete, onEdit }: TaskCardP
             }`}>
               {task.category}
             </span>
-            <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium border ${
+            <span className={`inline-flex items-center px-1 sm:px-2 py-1 rounded text-xs font-medium border ${
               task.priority === 'HIGH' ? 'bg-red-900 text-red-300 border-red-800' :
-              task.priority === 'MEDIUM' ? 'bg-yellow-900 text-yellow-300 border-yellow-800' :
               task.priority === 'LOW' ? 'bg-blue-900 text-blue-300 border-blue-800' :
               'bg-gray-900 text-gray-300 border-gray-800'
             }`}>
@@ -139,6 +138,22 @@ export default function TaskCard({ task, onToggle, onDelete, onEdit }: TaskCardP
             )}
           </div>
           
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row gap-2 mt-2 sm:mt-auto">
+            <button
+              onClick={() => onEdit(task)}
+              className="w-full sm:w-auto px-3 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors text-xs sm:text-sm"
+            >
+              ✏️ Edit
+            </button>
+            <button
+              onClick={() => onDelete(task.id)}
+              className="w-full sm:w-auto px-3 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors text-xs sm:text-sm"
+            >
+              🗑️ Delete
+            </button>
+          </div>
+
           {/* Completion Progress Bar */}
           {task.deadline && (
             <div className="mt-2">
