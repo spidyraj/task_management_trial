@@ -126,13 +126,16 @@ export class TaskController {
 
   async toggleTask(req: Request, res: Response) {
     try {
-      console.log('🔍 Toggle task request:', { params: req.params, body: req.body });
-      
       const userId = (req as any).user.userId;
       const { id } = req.params;
       const taskId = parseInt(id);
-      
-      console.log('🔍 Parsed data:', { userId, taskId, idParam: id });
+
+      if (!taskId || isNaN(taskId)) {
+        return res.status(400).json({
+          success: false,
+          message: 'Invalid task ID',
+        });
+      }
 
       const task = await taskService.toggleTask(taskId, userId);
 
