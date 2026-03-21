@@ -6,6 +6,11 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">
       <div className="text-center">
+        <div className="flex justify-center mb-8">
+          <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-5xl font-bold text-white shadow-lg mb-6">
+            📋
+          </div>
+        </div>
         <h1 className="text-4xl font-bold text-white mb-8">Task Management App</h1>
         <div className="space-y-4">
           <Link 

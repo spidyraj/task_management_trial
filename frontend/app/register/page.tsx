@@ -48,11 +48,9 @@ export default function RegisterPage() {
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <img 
-              src="/image__1_-removebg-preview.png" 
-              alt="App Logo" 
-              className="w-20 h-20 object-contain"
-            />
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-4xl font-bold text-white shadow-lg">
+              📋
+            </div>
           </div>
           <h2 className="text-3xl font-extrabold text-white">
             Create your account

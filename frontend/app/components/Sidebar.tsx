@@ -35,11 +35,9 @@ export default function Sidebar() {
         <div className="flex flex-col space-y-4">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/image__1_-removebg-preview.png" 
-              alt="App Logo" 
-              className="w-16 h-16 object-contain"
-            />
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg">
+              📋
+            </div>
             <span className="text-xl font-bold text-white">TaskMaster</span>
           </div>
           
