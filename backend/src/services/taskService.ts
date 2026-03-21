@@ -69,7 +69,7 @@ export class TaskService {
 
     // Apply sorting
     const orderBy: any = {};
-    const sortField = sortBy; // Use the field name directly
+    const sortField = sortBy === 'createdAt' ? 'created_at' : sortBy;
     orderBy[sortField] = sortOrder;
 
     const [tasks, total] = await Promise.all([
