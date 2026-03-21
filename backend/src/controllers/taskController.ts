@@ -126,9 +126,13 @@ export class TaskController {
 
   async toggleTask(req: Request, res: Response) {
     try {
+      console.log('🔍 Toggle task request:', { params: req.params, body: req.body });
+      
       const userId = (req as any).user.userId;
       const { id } = req.params;
       const taskId = parseInt(id);
+      
+      console.log('🔍 Parsed data:', { userId, taskId, idParam: id });
 
       const task = await taskService.toggleTask(taskId, userId);
 
