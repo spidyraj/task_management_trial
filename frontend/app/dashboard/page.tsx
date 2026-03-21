@@ -117,6 +117,8 @@ export default function DashboardPage() {
           task.id === taskId ? response.data : task
         ));
         toast.success('Task status updated!');
+        // Refresh tasks to get updated data
+        fetchTasks();
       }
     } catch (error: any) {
       toast.error('Failed to update task status');
