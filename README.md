@@ -153,24 +153,6 @@ task-management/
 ###  Dashboard analytics
 ![Empty Dashboard](screenshots/empty-dashboard.png)
 
-
-## �️ Tech Stack
-
-### Backend
-- **Node.js** + **TypeScript**
-- **Express.js** framework
-- **Prisma ORM** with PostgreSQL
-- **JWT Authentication** (access + refresh tokens)
-- **bcrypt** for password hashing
-- **express-validator** for input validation
-
-### Frontend
-- **Next.js 14** (App Router)
-- **TypeScript**
-- **Tailwind CSS** for styling
-- **Axios** for API calls
-- **React Hot Toast** for notifications
-
 ## 🔒 Security Features
 
 - **Password Hashing**: bcrypt with salt rounds (10)
