@@ -1,6 +1,6 @@
 # Task Management System
 
-🚀 **Live Application:** [https://frontend-production-2dff.up.railway.app/](https://frontend-production-2dff.up.railway.app/)
+🚀 **Live Application:** [https://task-management-trial-peach.vercel.app/](https://task-management-trial-peach.vercel.app/)
 
 A full-stack web application for managing personal tasks with secure authentication and comprehensive internal architecture.
 
@@ -31,7 +31,18 @@ Frontend (Next.js) → API Layer (Express) → Business Logic → Database (Post
 - **Backend**: Express.js server with Prisma ORM for database operations
 - **Frontend**: Next.js SPA with React hooks for state management
 - **Authentication**: JWT access tokens (15min) + refresh tokens (7days)
-- **Database**: PostgreSQL with Prisma migrations
+- **Database**: PostgreSQL (Supabase) with Prisma migrations
+
+## 🌍 Live Deployment
+
+### Frontend (Vercel)
+The user interface is deployed on Vercel as a Static Site (SSG), ensuring high performance and reliability.
+- **Link:** [https://task-management-trial-peach.vercel.app/](https://task-management-trial-peach.vercel.app/)
+
+### Backend (Railway)
+The Express API is hosted on Railway, connected to a Supabase PostgreSQL instance.
+- **Link:** [https://taskmanagementtrial-production.up.railway.app/api](https://taskmanagementtrial-production.up.railway.app/api)
+- **Health Check:** `https://taskmanagementtrial-production.up.railway.app/api/health`
 
 ## 📁 File Structure
 
@@ -133,12 +144,12 @@ task-management/
 ![Main Page](screenshots/main-page.png)
 
 
-### Register Interface
-![Login Page](screenshots/login.png)
+### Register Page
+![Register Page](screenshots/register.png)
 *User registration form with all required fields and validation*
 
-### Registration Form
-![Register Page](screenshots/register.png)
+### Login Page
+![Login Page](screenshots/login.png)
 *Clean and modern login interface with form validation and error handling*
 
 
