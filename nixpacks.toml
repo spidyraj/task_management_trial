@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["openjdk21-bootstrap", "maven"]
+
+[phases.build]
+cmds = ["mvn clean package -DskipTests"]
+
+[start]
+cmd = "java -jar target/task-management-backend-1.0.0.jar"
